@@ -1,12 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import { fetchVideos } from './modules/fetchVideos'
 
-function App() {
+const App = () => {
+  
+  useEffect(() => {
+    fetchVideos()
+  }, [])
+
   return (
-    <div className="App">
+    <div>
+      <div id="header">
+        <img src="https://kundservice.viaplay.se/wp-content/themes/viaplaycs/assets/dist/images/viaplay_white.svg" id="image"/>
+      </div>
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
