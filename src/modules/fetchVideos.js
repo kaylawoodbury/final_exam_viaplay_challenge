@@ -5,11 +5,12 @@ const fetchVideos = async () => {
   try {
     debugger
   let response = await axios.get(
-    `https://content.viaplay.se/pc-se/serier/samtliga._embedded['viaplay:blocks'][0]._embedded['viaplay:products']`
+    `https://content.viaplay.se/pc-se/serier/samtliga`
   )
   debugger
   return response.data
   } catch (error) {
+    debugger
     return error
   }
 }
